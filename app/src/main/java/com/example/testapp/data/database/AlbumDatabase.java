@@ -13,6 +13,7 @@ import androidx.room.RoomDatabase;
 public abstract class AlbumDatabase extends RoomDatabase {
     private static AlbumDatabase INSTANCE;
 
+
     public abstract AlbumDao AlbumDao();
 
     public static AlbumDatabase getAlbumDatabase(Context context) {

@@ -8,11 +8,12 @@ import androidx.room.PrimaryKey;
 public class PictureDetails {
 
         @PrimaryKey
-        private int id;
-        private int albumId ;
-        private String title;
-        private String url;
-        private String thumbnailUrl;
+        private int id;//id of picture
+        private int albumId ;// album id
+        private String title;// title of picture
+        private String url;//url of best quality picture
+        private String thumbnailUrl;// url of picture will be used as the preview image
+
         public int getId() {
                 return id;
         }

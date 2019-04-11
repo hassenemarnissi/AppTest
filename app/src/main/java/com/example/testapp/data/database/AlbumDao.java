@@ -17,7 +17,8 @@ import static androidx.room.OnConflictStrategy.REPLACE;
 @Dao
 public interface AlbumDao {
     @Insert(onConflict = REPLACE)
-    void save(List<PictureDetails> album);
+    void save(List<PictureDetails> album);// insert album in database
     @Query("SELECT * FROM album ")
-    LiveData<List<PictureDetails>> load();
+    LiveData<List<PictureDetails>> load();//to recover album from database
+
 }

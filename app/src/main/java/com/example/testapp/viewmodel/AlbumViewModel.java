@@ -27,6 +27,7 @@ public class AlbumViewModel extends ViewModel {
     }
 
     public void init(Context context) {
+        //initialize Album repository
         this.albumRepository=new AlbumRepository(context);
         if (this.album != null) {
 
