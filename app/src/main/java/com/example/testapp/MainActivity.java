@@ -3,6 +3,8 @@ package com.example.testapp;
 
 
 import android.os.Bundle;
+import android.widget.LinearLayout;
+
 import com.example.testapp.adapter.AlbumAdapter;
 import com.example.testapp.data.model.PictureDetails;
 import com.example.testapp.viewmodel.AlbumViewModel;
@@ -16,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 
 import androidx.lifecycle.ViewModelProviders;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
@@ -38,10 +40,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onChanged(@Nullable List<PictureDetails> album) {
                 mRecyclerView = findViewById(R.id.rvAlbum);
-                GridLayoutManager mGridLayoutManager = new GridLayoutManager(MainActivity.this, 2);
-                mRecyclerView.setLayoutManager(mGridLayoutManager);
+                LinearLayoutManager mLinearLayoutManager= new LinearLayoutManager(MainActivity.this);
+                mRecyclerView.setLayoutManager(mLinearLayoutManager);
                 AlbumAdapter albumAdapter = new AlbumAdapter(MainActivity.this, album);
                 mRecyclerView.setAdapter(albumAdapter);
+
 
             }
         });
